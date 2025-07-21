@@ -91,7 +91,7 @@ func New(log *slog.Logger, urlSaver URLSaver) http.HandlerFunc {
 
 func responseOK(w http.ResponseWriter, r *http.Request, alias string) {
 	render.JSON(w, r, Response{
-		Response: response.OK(),
-		Alias:    alias,
+		Status: "OK",
+		Alias:  alias,
 	})
 }
